@@ -19,8 +19,9 @@ Deckhand는 cmux 안에서 돌아가는 여러 Claude Code 세션을 고르고, 
 9. [메뉴 막대](#9-메뉴-막대)
 10. [Mac 앱 없이 쓰기 (단축키 모드)](#10-mac-앱-없이-쓰기-단축키-모드)
 11. [업데이트](#11-업데이트)
-12. [문제 해결](#12-문제-해결)
-13. [문의](#13-문의)
+12. [끄기와 제거](#12-끄기와-제거)
+13. [문제 해결](#13-문제-해결)
+14. [문의](#14-문의)
 
 ## 1. 필요한 것
 
@@ -40,7 +41,7 @@ deckhand setup      # 로그인할 때 자동으로 켜기
 ```
 
 - `deckhand setup`은 무엇을 바꾸는지 먼저 보여 주고 동의를 받습니다. 바꾸는 것은 두 가지입니다: cmux의 접근 방식을 `automation`으로 바꾸고(`~/.config/cmux/cmux.json`의 한 줄), 로그인 항목을 등록합니다.
-- 되돌리려면 `deckhand uninstall`을 실행합니다.
+- 되돌리려면 `deckhand uninstall`을 실행합니다. 완전히 제거하는 방법은 [12번](#12-끄기와-제거)에 있습니다.
 - 키패드 없이 미리 둘러보려면 `deckhand simulate --web --demo`를 실행합니다. 가상 세션으로 동작하고 cmux를 건드리지 않습니다.
 
 ## 3. 처음 연결할 때
@@ -175,7 +176,30 @@ brew services restart zemyblue/tap/deckhand
 
 그다음 키패드 화면 제목 줄에 `FW^`가 보이면 메뉴 막대의 **키패드 → 키패드 펌웨어 올리기**를 누릅니다. 터미널에서 `deckhand flash`를 실행해도 같습니다. 케이블을 뽑거나 케이스를 열 필요가 없습니다.
 
-## 12. 문제 해결
+## 12. 끄기와 제거
+
+**잠깐 끄기**
+
+```sh
+brew services stop zemyblue/tap/deckhand     # 끄기
+brew services start zemyblue/tap/deckhand    # 다시 켜기
+```
+
+꺼져 있는 동안 키패드는 [단축키 모드](#10-mac-앱-없이-쓰기-단축키-모드)로 동작합니다.
+
+**완전히 제거하기**
+
+```sh
+deckhand uninstall                       # 로그인 항목 해제, setup이 바꾼 cmux 설정 한 줄 되돌리기
+brew uninstall zemyblue/tap/deckhand     # Mac 앱 삭제
+brew untap zemyblue/tap                  # (선택) 설치 목록에서 이 저장소 빼기
+```
+
+- 순서를 지켜 주세요. 앱을 먼저 지우면 `deckhand uninstall`을 실행할 수 없습니다.
+- 남는 파일은 두 가지이고, 필요 없으면 직접 지웁니다: 설정 `~/.config/deckhand/`, 기록 `$(brew --prefix)/var/log/deckhand.log`.
+- 키패드 자체에는 지울 것이 없습니다. 앱이 없으면 설치 안내 화면과 단축키 모드로 동작합니다.
+
+## 13. 문제 해결
 
 | 증상 | 해 볼 것 |
 |---|---|
@@ -188,6 +212,6 @@ brew services restart zemyblue/tap/deckhand
 | 키나 LED 하나가 동작하지 않음 | 메뉴 막대의 **키패드 → 자가 진단 시작**, 또는 S1과 S5를 함께 2초 누릅니다. 키, 노브, LED, 화면을 하나씩 확인합니다. 같은 조합으로 나옵니다 |
 | 음성 키가 안 됨 | Claude Code에서 `/voice`가 되는지 먼저 확인합니다 |
 
-## 13. 문의
+## 14. 문의
 
 문제나 제안은 이 저장소의 [Issues](https://github.com/zemyblue/deckhand-guide/issues)에 남겨 주세요. `deckhand --version`의 출력과 키패드 화면에 보이는 내용을 함께 적어 주시면 빨리 확인할 수 있습니다.

@@ -19,8 +19,9 @@ Deckhand is a USB keypad for picking between several Claude Code sessions runnin
 9. [Menu bar](#9-menu-bar)
 10. [Without the Mac app (shortcut mode)](#10-without-the-mac-app-shortcut-mode)
 11. [Updating](#11-updating)
-12. [Troubleshooting](#12-troubleshooting)
-13. [Support](#13-support)
+12. [Turning it off and removing it](#12-turning-it-off-and-removing-it)
+13. [Troubleshooting](#13-troubleshooting)
+14. [Support](#14-support)
 
 ## 1. What you need
 
@@ -40,7 +41,7 @@ deckhand setup      # start at login
 ```
 
 - `deckhand setup` shows what it will change and asks first. It changes two things: it switches cmux's access mode to `automation` (one line in `~/.config/cmux/cmux.json`) and adds a login item.
-- To undo it, run `deckhand uninstall`.
+- To undo it, run `deckhand uninstall`. Removing everything is in [section 12](#12-turning-it-off-and-removing-it).
 - To look around without a keypad, run `deckhand simulate --web --demo`. It uses made-up sessions and does not touch cmux.
 
 ## 3. First connection
@@ -177,7 +178,30 @@ brew services restart zemyblue/tap/deckhand
 
 Then, if the keypad's title bar shows `FW^`, choose **키패드 → 키패드 펌웨어 올리기** in the menu bar, or run `deckhand flash` in a terminal. There is no need to unplug the cable or open the case.
 
-## 12. Troubleshooting
+## 12. Turning it off and removing it
+
+**Turning it off for a while**
+
+```sh
+brew services stop zemyblue/tap/deckhand     # off
+brew services start zemyblue/tap/deckhand    # on again
+```
+
+While it is off, the keypad works in [shortcut mode](#10-without-the-mac-app-shortcut-mode).
+
+**Removing it completely**
+
+```sh
+deckhand uninstall                       # removes the login item and the one cmux setting that setup changed
+brew uninstall zemyblue/tap/deckhand     # deletes the Mac app
+brew untap zemyblue/tap                  # (optional) drops this tap from Homebrew
+```
+
+- Keep this order. Once the app is deleted, `deckhand uninstall` can no longer run.
+- Two things stay behind; delete them yourself if you do not need them: settings in `~/.config/deckhand/`, and the log at `$(brew --prefix)/var/log/deckhand.log`.
+- Nothing needs removing from the keypad. Without the app it shows the install guide and works in shortcut mode.
+
+## 13. Troubleshooting
 
 | What you see | What to try |
 |---|---|
@@ -190,6 +214,6 @@ Then, if the keypad's title bar shows `FW^`, choose **키패드 → 키패드 �
 | One key or LED does not work | Menu bar **키패드 → 자가 진단 시작** (Keypad → Start self-test), or hold S1 and S5 together for 2 seconds. It checks every key, the knob, the LEDs and the screen. The same two keys leave it |
 | The voice key does nothing | First check that `/voice` works in Claude Code |
 
-## 13. Support
+## 14. Support
 
 Please report problems and suggestions in this repository's [Issues](https://github.com/zemyblue/deckhand-guide/issues). Include the output of `deckhand --version` and what the keypad's screen shows.
