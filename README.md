@@ -4,7 +4,7 @@
 
 Deckhand is a USB keypad for picking between several Claude Code sessions running in cmux, answering their questions, and giving instructions by voice.
 
-![Deckhand keypad](images/deckhand.png)
+![Deckhand keypad](images/deckhand.png?v=2)
 
 ## Contents
 
@@ -59,7 +59,7 @@ The Mac app's menus and messages are in Korean for now; this guide gives the Kor
 
 ## 4. Keys and knob
 
-![Keypad layout](images/layout-en.svg)
+![Keypad layout](images/layout-en.svg?v=2)
 
 | Input | Short press | Long press (0.6 s or more) |
 |---|---|---|

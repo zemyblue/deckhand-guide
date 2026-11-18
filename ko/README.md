@@ -4,7 +4,7 @@
 
 Deckhand는 cmux 안에서 돌아가는 여러 Claude Code 세션을 고르고, 질문에 답하고, 음성으로 지시하는 USB 키패드입니다.
 
-![Deckhand 키패드](../images/deckhand.png)
+![Deckhand 키패드](../images/deckhand.png?v=2)
 
 ## 목차
 
@@ -57,7 +57,7 @@ deckhand setup      # 로그인할 때 자동으로 켜기
 
 ## 4. 키와 노브
 
-![키패드 배치](../images/layout-ko.svg)
+![키패드 배치](../images/layout-ko.svg?v=2)
 
 | 입력 | 짧게 누름 | 길게 누름 (0.6초 이상) |
 |---|---|---|
