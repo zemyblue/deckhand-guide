@@ -1,6 +1,6 @@
 # Deckhand Guide
 
-**English** | [한국어](ko/README.md)
+**English** · [한국어](ko/README.md)
 
 Deckhand is a USB keypad for picking between several Claude Code sessions running in cmux, answering their questions, and giving instructions by voice.
 

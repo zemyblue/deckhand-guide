@@ -1,6 +1,6 @@
 # Deckhand 사용 설명서
 
-[English](../README.md) | **한국어**
+[English](../README.md) · **한국어**
 
 Deckhand는 cmux 안에서 돌아가는 여러 Claude Code 세션을 고르고, 질문에 답하고, 음성으로 지시하는 USB 키패드입니다.
 

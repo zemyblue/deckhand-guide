@@ -1,0 +1,25 @@
+name: Suggestion / 제안
+description: An idea for the keypad, the Mac app or this guide. / 키패드, Mac 앱, 설명서에 대한 제안
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Write in English or Korean. / 영어나 한국어로 적어 주세요.
+  - type: dropdown
+    id: area
+    attributes:
+      label: What is it about? / 무엇에 대한 제안인가요?
+      options:
+        - Keypad hardware / 키패드 하드웨어
+        - Keypad firmware (screen, LEDs, keys) / 키패드 펌웨어 (화면, LED, 키)
+        - Mac app / Mac 앱
+        - This guide / 설명서
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like? / 무엇을 원하시나요?
+      description: What you want to do, and what gets in the way today. / 하고 싶은 일과, 지금 불편한 점
+    validations:
+      required: true

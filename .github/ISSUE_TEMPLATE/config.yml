@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: User guide / 사용 설명서
+    url: https://zemyblue.github.io/deckhand-guide/
+    about: Check the troubleshooting section first. / 먼저 문제 해결 항목을 확인해 주세요.

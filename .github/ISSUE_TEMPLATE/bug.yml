@@ -1,0 +1,57 @@
+name: Problem report / 문제 신고
+description: Something does not work as the guide says. / 설명서대로 동작하지 않을 때
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write in English or Korean. / 영어나 한국어로 적어 주세요.
+        Please do not paste private things (project names, prompts, tokens). / 프로젝트 이름, 프롬프트, 토큰 같은 개인 정보는 적지 마세요.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where is the problem? / 어디의 문제인가요?
+      options:
+        - Keypad hardware (keys, knob, LEDs, screen, USB) / 키패드 하드웨어 (키, 노브, LED, 화면, USB)
+        - Keypad firmware (what the keypad shows or does) / 키패드 펌웨어 (키패드의 표시나 동작)
+        - Mac app (install, menu bar, settings, cmux) / Mac 앱 (설치, 메뉴 막대, 환경설정, cmux)
+        - Not sure / 잘 모르겠음
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? / 무슨 일이 있었나요?
+      description: What you did, what you expected, and what happened instead. / 무엇을 했고, 무엇을 기대했고, 실제로 어떻게 됐는지
+    validations:
+      required: true
+  - type: textarea
+    id: screen
+    attributes:
+      label: What does the keypad show? / 키패드에 무엇이 보이나요?
+      description: The text on the screen and the LED colours. A photo helps. / 화면의 글자와 LED 색. 사진이 있으면 좋습니다.
+  - type: input
+    id: version
+    attributes:
+      label: App version / 앱 버전
+      description: "Output of `deckhand --version` / `deckhand --version`의 출력"
+      placeholder: deckhand 0.1.6
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Keypad firmware / 키패드 펌웨어
+      description: "Menu bar: 키패드 (Keypad) → 펌웨어 line / 메뉴 막대의 키패드 → 펌웨어 줄"
+      placeholder: 0.1.6+781db826
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version / macOS 버전
+      placeholder: "15.2"
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `deckhand doctor` / `deckhand doctor`의 출력
+      description: Only for Mac app or connection problems. / Mac 앱이나 연결 문제일 때만
+      render: text
