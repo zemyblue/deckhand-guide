@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Deckhand keypad layout" font-family="-apple-system, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+<rect width="800" height="450" rx="12" fill="#FFFFFF"/>
+<rect x="20" y="20" width="480" height="410" rx="22" fill="#2B2D31"/>
+<rect x="50" y="48" width="250" height="118" rx="6" fill="#0B0C0E" stroke="#4C6FB0" stroke-width="2"/>
+<text x="175" y="113" text-anchor="middle" font-size="16" fill="#C9D1D9">Screen</text>
+<circle cx="408" cy="107" r="46" fill="#17181B" stroke="#55585F" stroke-width="3"/>
+<circle cx="408" cy="107" r="30" fill="#232529"/>
+<rect x="50" y="186" width="70" height="9" rx="4" fill="#FF3B3B"/>
+<rect x="50" y="208" width="70" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="85.0" y="244" text-anchor="middle" font-size="15" fill="#2B2F36">S1</text>
+<rect x="50" y="278" width="70" height="60" rx="9" fill="#D9DCE1" stroke="#9AA0A8"/><text x="85.0" y="314" text-anchor="middle" font-size="15" fill="#2B2F36">F1</text>
+<rect x="134" y="186" width="70" height="9" rx="4" fill="#FF7A1A"/>
+<rect x="134" y="208" width="70" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="169.0" y="244" text-anchor="middle" font-size="15" fill="#2B2F36">S2</text>
+<rect x="134" y="278" width="70" height="60" rx="9" fill="#D9DCE1" stroke="#9AA0A8"/><text x="169.0" y="314" text-anchor="middle" font-size="15" fill="#2B2F36">F2</text>
+<rect x="218" y="186" width="70" height="9" rx="4" fill="#2ECC71"/>
+<rect x="218" y="208" width="70" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="253.0" y="244" text-anchor="middle" font-size="15" fill="#2B2F36">S3</text>
+<rect x="218" y="278" width="70" height="60" rx="9" fill="#D9DCE1" stroke="#9AA0A8"/><text x="253.0" y="314" text-anchor="middle" font-size="15" fill="#2B2F36">F3</text>
+<rect x="302" y="186" width="70" height="9" rx="4" fill="#F2B233"/>
+<rect x="302" y="208" width="70" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="337.0" y="244" text-anchor="middle" font-size="15" fill="#2B2F36">S4</text>
+<rect x="302" y="278" width="70" height="60" rx="9" fill="#D9DCE1" stroke="#9AA0A8"/><text x="337.0" y="314" text-anchor="middle" font-size="15" fill="#2B2F36">F4</text>
+<rect x="386" y="186" width="70" height="9" rx="4" fill="#8A6FD0"/>
+<rect x="386" y="208" width="70" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="421.0" y="244" text-anchor="middle" font-size="15" fill="#2B2F36">S5</text>
+<rect x="386" y="278" width="70" height="60" rx="9" fill="#D9DCE1" stroke="#9AA0A8"/><text x="421.0" y="314" text-anchor="middle" font-size="15" fill="#2B2F36">F5</text>
+<rect x="50" y="348" width="70" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="85.0" y="384" text-anchor="middle" font-size="15" fill="#2B2F36">✓</text>
+<rect x="134" y="348" width="70" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="169.0" y="384" text-anchor="middle" font-size="15" fill="#2B2F36">✕</text>
+<rect x="218" y="348" width="112" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="274.0" y="384" text-anchor="middle" font-size="15" fill="#2B2F36">Voice</text>
+<rect x="344" y="348" width="112" height="60" rx="9" fill="#F1F2F4" stroke="#9AA0A8"/><text x="400.0" y="384" text-anchor="middle" font-size="15" fill="#2B2F36">Enter ↵</text>
+<line x1="504" y1="92" x2="522" y2="92" stroke="#6B7280" stroke-width="1.5"/><text x="530" y="97" font-size="15" font-weight="600" fill="#1F2328">Knob</text><text x="530" y="117" font-size="13" fill="#57606A">turn: pages / scroll</text><text x="530" y="135" font-size="13" fill="#57606A">press: change mode</text>
+<line x1="504" y1="190" x2="522" y2="190" stroke="#6B7280" stroke-width="1.5"/><text x="530" y="195" font-size="15" font-weight="600" fill="#1F2328">Status LEDs</text><text x="530" y="215" font-size="13" fill="#57606A">one per session on the screen</text>
+<line x1="504" y1="238" x2="522" y2="238" stroke="#6B7280" stroke-width="1.5"/><text x="530" y="243" font-size="15" font-weight="600" fill="#1F2328">Session keys S1 to S5</text><text x="530" y="263" font-size="13" fill="#57606A">go to that session</text>
+<line x1="504" y1="308" x2="522" y2="308" stroke="#6B7280" stroke-width="1.5"/><text x="530" y="313" font-size="15" font-weight="600" fill="#1F2328">Function keys F1 to F5</text><text x="530" y="333" font-size="13" fill="#57606A">actions you set</text>
+<line x1="504" y1="378" x2="522" y2="378" stroke="#6B7280" stroke-width="1.5"/><text x="530" y="383" font-size="15" font-weight="600" fill="#1F2328">Approve, Reject, Voice, Enter</text><text x="530" y="403" font-size="13" fill="#57606A">answer Claude, talk, send</text>
+</svg>
