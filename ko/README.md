@@ -149,6 +149,7 @@ Mac 앱이 켜져 있으면 메뉴 막대에 deckhand 아이콘이 있습니다.
 - **Mac 앱**: 버전, 새 버전 확인, 업데이트
 - **환경설정…**: F1~F5와 음성 방식
 - **deckhand 다시 시작**
+- **deckhand 끝내기**: 지금만 끕니다. 다음 로그인 때 다시 켜집니다 ([12번](#12-끄기와-제거))
 
 ## 10. Mac 앱 없이 쓰기 (단축키 모드)
 
@@ -180,10 +181,10 @@ brew services restart zemyblue/tap/deckhand
 
 **잠깐 끄기**
 
-```sh
-brew services stop zemyblue/tap/deckhand     # 끄기
-brew services start zemyblue/tap/deckhand    # 다시 켜기
-```
+메뉴 막대의 deckhand 아이콘에서 **deckhand 끝내기**를 누릅니다. 확인 창에서 "끝내기"를 고르면 꺼집니다.
+
+- 다음에 로그인하면 다시 켜집니다.
+- 지금 다시 켜려면 터미널에서 `deckhand start`를 실행합니다.
 
 꺼져 있는 동안 키패드는 [단축키 모드](#10-mac-앱-없이-쓰기-단축키-모드)로 동작합니다.
 
@@ -204,7 +205,7 @@ brew untap zemyblue/tap                  # (선택) 설치 목록에서 이 저�
 | 증상 | 해 볼 것 |
 |---|---|
 | LED 전체가 호박색으로 숨쉬고 키가 안 먹음 | Mac 앱과 연결이 끊긴 것입니다. `brew services restart zemyblue/tap/deckhand`를 실행합니다. 그래도 안 되면 케이블을 양쪽 다 뽑았다 꽂고, 다른 케이블과 다른 USB 포트를 써 봅니다 |
-| 설치했는데도 설치 안내 화면이 뜸 | Mac 앱이 꺼져 있습니다. `deckhand setup`을 실행합니다 |
+| 설치했는데도 설치 안내 화면이 뜸 | Mac 앱이 꺼져 있습니다. 메뉴에서 끝낸 것이라면 `deckhand start`, 아직 설정하지 않았다면 `deckhand setup`을 실행합니다 |
 | 화면에 `waiting for cmux`가 보임 | cmux를 실행합니다 |
 | 제목 줄에 `FW^` | 키패드 펌웨어가 오래됨. 메뉴 막대에서 펌웨어를 올립니다 |
 | 제목 줄에 `APP^` | Mac 앱이 오래됨. [11번](#11-업데이트)대로 업데이트합니다 |

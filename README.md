@@ -151,6 +151,7 @@ While the Mac app runs, a deckhand icon sits in the menu bar.
 - **Mac 앱** (Mac app): version, check for a new version, update
 - **환경설정…** (Settings): F1 to F5 and the voice mode
 - **deckhand 다시 시작** (Restart deckhand)
+- **deckhand 끝내기** (Quit deckhand): off for now; it starts again at the next login ([section 12](#12-turning-it-off-and-removing-it))
 
 ## 10. Without the Mac app (shortcut mode)
 
@@ -182,10 +183,10 @@ Then, if the keypad's title bar shows `FW^`, choose **키패드 → 키패드 �
 
 **Turning it off for a while**
 
-```sh
-brew services stop zemyblue/tap/deckhand     # off
-brew services start zemyblue/tap/deckhand    # on again
-```
+Open the deckhand icon in the menu bar and choose **deckhand 끝내기** (Quit deckhand). Confirm with "끝내기" (Quit).
+
+- It starts again the next time you log in.
+- To start it again now, run `deckhand start` in a terminal.
 
 While it is off, the keypad works in [shortcut mode](#10-without-the-mac-app-shortcut-mode).
 
@@ -206,7 +207,7 @@ brew untap zemyblue/tap                  # (optional) drops this tap from Homebr
 | What you see | What to try |
 |---|---|
 | All LEDs breathe amber and the keys do nothing | The Mac app is not connected. Run `brew services restart zemyblue/tap/deckhand`. If that does not help, unplug and replug both ends of the cable, then try another cable and another USB port |
-| The install guide shows although the app is installed | The Mac app is not running. Run `deckhand setup` |
+| The install guide shows although the app is installed | The Mac app is not running. If you quit it from the menu, run `deckhand start`; if it was never set up, run `deckhand setup` |
 | The screen says `waiting for cmux` | Start cmux |
 | `FW^` in the title bar | The keypad's firmware is older. Update it from the menu bar |
 | `APP^` in the title bar | The Mac app is older. Update as in [section 11](#11-updating) |
