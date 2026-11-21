@@ -66,7 +66,7 @@ The Mac app's menus and messages are in Korean for now; this guide gives the Kor
 |---|---|---|
 | Session keys S1 to S5 | Go to the session on the same line of the screen | Interrupt that session (Esc) |
 | Approve (✓) | "Yes" to Claude's plan or permission request. On the answer screen: pick the choice under the cursor. With nothing to answer: take the next prompt Claude suggests into the input box | "Always allow" |
-| Reject (✕) | Step out: answer screen → session list, text scroll → pages. With nowhere left to step out: Esc to the session | Ctrl+C. On the answer screen: decline that question or request |
+| Reject (✕) | Step out: answer screen → the screen before it, waiting view → full list. With nowhere left to step out: Esc to the session. It never changes the knob mode | Ctrl+C. On the answer screen: decline that question or request |
 | Voice (microphone) | Turns Claude Code's voice input (`/voice`) on and off. Hold-to-talk or press-to-toggle follows Claude's setting | none |
 | Enter (↵) | Enter to the selected session (send the prompt you wrote) | Shift+Enter (new line) |
 | F1 to F5 | The action you set ([section 8](#8-f1-to-f5)) | The long-press action you set |
@@ -87,7 +87,7 @@ The session keys carry no numbers: turning the knob changes which sessions they 
 
 **Waiting view**: a long press of the knob in page mode shows only the sessions that need an answer, longest waiting first. A long press again, or a press of the knob, returns to the full list.
 
-**Text scroll mode**: press the knob to show the selected session on its own; turning the knob scrolls its conversation in cmux.
+**Text scroll mode**: press the knob to show the selected session on its own; turning the knob scrolls its conversation in cmux. Press the knob again to go back to the page mode. The reject key does not leave this mode (it sends Esc to that session).
 
 **Answer screen**: appears by itself when Claude asks you to choose ([section 7](#7-answering-claudes-questions)).
 
@@ -179,6 +179,8 @@ brew services restart zemyblue/tap/deckhand
 
 Then, if the keypad's title bar shows `FW^`, choose **키패드 → 키패드 펌웨어 올리기** in the menu bar, or run `deckhand flash` in a terminal. There is no need to unplug the cable or open the case.
 
+To see which firmware the keypad has, long-press the knob in page mode (the waiting view): the version is on the screen.
+
 ## 12. Turning it off and removing it
 
 **Turning it off for a while**
@@ -214,7 +216,14 @@ brew untap zemyblue/tap                  # (optional) drops this tap from Homebr
 | A session is missing from the list | Run `deckhand doctor` to check the cmux connection |
 | One key or LED does not work | Menu bar **키패드 → 자가 진단 시작** (Keypad → Start self-test), or hold S1 and S5 together for 2 seconds. It checks every key, the knob, the LEDs and the screen. The same two keys leave it |
 | The voice key does nothing | First check that `/voice` works in Claude Code |
+| Something not listed here | Run `deckhand report` and attach the file it makes to [Support](#14-support) |
 
 ## 14. Support
 
 Please report problems and suggestions in this repository's [Issues](https://github.com/zemyblue/deckhand-guide/issues). Include the output of `deckhand --version` and what the keypad's screen shows.
+
+`deckhand report` writes a file to attach to your report, on the Desktop, named `deckhand-report-…`.
+
+- It holds the versions, the `deckhand doctor` checks and the last 400 lines of the service log.
+- Session names, typed text, the home folder and the account name are hidden.
+- Nothing is sent anywhere. Open the file, read it, and attach it yourself.

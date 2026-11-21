@@ -55,3 +55,8 @@ body:
       label: Output of `deckhand doctor` / `deckhand doctor`의 출력
       description: Only for Mac app or connection problems. / Mac 앱이나 연결 문제일 때만
       render: text
+  - type: textarea
+    id: report
+    attributes:
+      label: Report file / 신고용 파일
+      description: "Run `deckhand report` (0.1.8b2 or later) and drag the file from the Desktop here. Names and typed text are hidden in it; read it before attaching. / `deckhand report`(0.1.8b2 이상)를 실행하고 데스크탑에 생긴 파일을 여기에 끌어다 놓습니다. 이름과 입력한 글은 가려져 있습니다. 붙이기 전에 읽어 보세요."
