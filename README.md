@@ -138,7 +138,7 @@ The defaults:
 | F2 | Change Claude Code's permission mode (Shift+Tab) |
 | F3 | Open a new session |
 | F4 | Bring the last prompt back into the input box (↑) |
-| F5 | Delete: short = one character, long = one word |
+| F5 | Delete: a press = one character, held = keeps deleting |
 
 To change them, open **환경설정…** (Settings) from the deckhand icon in the menu bar.
 
@@ -180,6 +180,11 @@ brew services restart zemyblue/tap/deckhand
 Then, if the keypad's title bar shows `FW^`, choose **키패드 → 키패드 펌웨어 올리기** in the menu bar, or run `deckhand flash` in a terminal. There is no need to unplug the cable or open the case.
 
 To see which firmware the keypad has, long-press the knob in page mode (the waiting view): the version is on the screen.
+
+**From 0.2.0b1** the keypad has new firmware (it starts and updates faster). Update the Mac app first, then the keypad: an older app does not understand the new firmware's F5.
+
+- To go back to the previous firmware: `deckhand flash --python`
+- If the keypad does not show up on USB: plug it in while holding **S1 + S5 + ENTER**. When an `RP2350` drive appears on the Mac, run `deckhand flash`.
 
 ## 12. Turning it off and removing it
 
