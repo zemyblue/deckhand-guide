@@ -144,6 +144,7 @@ To change them, open **환경설정…** (Settings) from the deckhand icon in th
 
 - **Send keys**: tick ⌃ Control, ⌥ Option, ⇧ Shift or ⌘ Command, pick a key and press **넣기** (Add) to get a combination such as `cmd+shift+k`, shown below as ⌘⇧K. Add several to send them one after another. F1 to F12, and digits or symbols with a modifier, are not taken by cmux, so they are not saved.
 - **Mac key (volume, play, brightness)**: volume up/down, mute, play/pause, next/previous track, screen brighter/dimmer. The keypad presses it like the Mac keyboard's own key (from 0.2.0b2).
+- **Mac shortcut (keypad presses it as a keyboard)**: the keypad presses the combination like a real keyboard. Mac-wide shortcuts (for example `ctrl+option+cmd+.` or `cmd+space`), F keys, and digits or symbols with modifiers all work. It goes to the app in front, not to a session (from 0.2.1).
 - If saving fails, the top of the page names the key to fix and scrolls to it.
 
 ## 9. Menu bar
@@ -187,7 +188,7 @@ To see which firmware the keypad has, long-press the knob in page mode (the wait
 
 **From 0.2.0b1** the keypad has new firmware (it starts and updates faster). Update the Mac app first, then the keypad: an older app does not understand the new firmware's F5.
 
-- On a computer that blocks USB drives (a work computer, say) the firmware cannot be updated, though the keypad still works. Update it on another computer and take it back: the firmware stays in the keypad.
+- **From 0.2.1** the firmware is sent over USB serial, so it can be updated on a computer that blocks USB drives (a work computer, say). The **first** update from 0.2.0b2 or older to 0.2.1 still needs a computer that allows USB drives, once. If the new firmware does not start, the keypad goes back to the previous one by itself.
 - If the keypad does not show up on USB: plug it in while holding **S1 + S5 + ENTER**. When an `RP2350` drive appears on the Mac, run `deckhand flash`.
 
 ## 12. Turning it off and removing it
