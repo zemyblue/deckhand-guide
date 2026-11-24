@@ -142,6 +142,10 @@ The defaults:
 
 To change them, open **환경설정…** (Settings) from the deckhand icon in the menu bar.
 
+- **Send keys**: tick ⌃ Control, ⌥ Option, ⇧ Shift or ⌘ Command, pick a key and press **넣기** (Add) to get a combination such as `cmd+shift+k`, shown below as ⌘⇧K. Add several to send them one after another. F1 to F12, and digits or symbols with a modifier, are not taken by cmux, so they are not saved.
+- **Mac key (volume, play, brightness)**: volume up/down, mute, play/pause, next/previous track, screen brighter/dimmer. The keypad presses it like the Mac keyboard's own key (from 0.2.0b2).
+- If saving fails, the top of the page names the key to fix and scrolls to it.
+
 ## 9. Menu bar
 
 While the Mac app runs, a deckhand icon sits in the menu bar.
@@ -183,7 +187,7 @@ To see which firmware the keypad has, long-press the knob in page mode (the wait
 
 **From 0.2.0b1** the keypad has new firmware (it starts and updates faster). Update the Mac app first, then the keypad: an older app does not understand the new firmware's F5.
 
-- To go back to the previous firmware: `deckhand flash --python`
+- On a computer that blocks USB drives (a work computer, say) the firmware cannot be updated, though the keypad still works. Update it on another computer and take it back: the firmware stays in the keypad.
 - If the keypad does not show up on USB: plug it in while holding **S1 + S5 + ENTER**. When an `RP2350` drive appears on the Mac, run `deckhand flash`.
 
 ## 12. Turning it off and removing it
