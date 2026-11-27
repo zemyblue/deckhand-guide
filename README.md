@@ -53,7 +53,7 @@ Plug the keypad in over USB.
 
 <img src="images/screen-install-en.png" alt="Install guide screen" width="332">
 
-- `FW^` at the right of the title bar means the keypad's firmware is older than the Mac app. In the menu bar, open the deckhand icon and choose **키패드 → 키패드 펌웨어 올리기** (Keypad → Update keypad firmware). The keypad restarts once and it is done.
+- An orange warning triangle (⚠) at the right end of the title bar means the keypad's firmware differs from the Mac app's (up to 0.2.2b1 it read `FW^`). In the menu bar, open the deckhand icon and choose **키패드 → 키패드 펌웨어 올리기** (Keypad → Update keypad firmware). The keypad restarts once and it is done.
 - If macOS opens "Keyboard Setup Assistant" the first time, you can close it.
 
 The Mac app's menus and messages are in Korean for now; this guide gives the Korean label with its meaning.
@@ -81,7 +81,7 @@ The session keys carry no numbers: turning the knob changes which sessions they 
 
 <img src="images/screen-list.png" alt="Session list screen" width="332">
 
-- Title bar: totals over all sessions (`?2` = two sessions need an answer, `~3` = three are working), the range shown (`1-5`), page tabs, and the knob mode (`PAGE` or `SCROLL`).
+- Title bar: totals over all sessions (`?2` = two sessions need an answer, `~3` = three are working), the range shown (`1-5`), page tabs, and the knob mode (`PAGE` or `SCROLL`). A page tab is the page's first session number; the page shown is bright and in brackets, like `[6]`. With more than four pages the tabs follow the page shown, and `<` or `>` marks the side that has more (for example `<11 [16] 21 26`).
 - Five lines below: session number, name, state, and how long it has been in that state. The selected session is marked with `>`.
 - Bottom: a summary of the selected session's last request.
 
@@ -182,7 +182,7 @@ brew upgrade zemyblue/tap/deckhand
 brew services restart zemyblue/tap/deckhand
 ```
 
-Then, if the keypad's title bar shows `FW^`, choose **키패드 → 키패드 펌웨어 올리기** in the menu bar, or run `deckhand flash` in a terminal. There is no need to unplug the cable or open the case.
+Then, if the keypad's title bar shows an orange warning triangle (⚠), choose **키패드 → 키패드 펌웨어 올리기** in the menu bar, or run `deckhand flash` in a terminal. There is no need to unplug the cable or open the case.
 
 To see which firmware the keypad has, long-press the knob in page mode (the waiting view): the version is on the screen.
 
@@ -221,8 +221,7 @@ brew untap zemyblue/tap                  # (optional) drops this tap from Homebr
 | All LEDs breathe amber and the keys do nothing | The Mac app is not connected. Run `brew services restart zemyblue/tap/deckhand`. If that does not help, unplug and replug both ends of the cable, then try another cable and another USB port |
 | The install guide shows although the app is installed | The Mac app is not running. If you quit it from the menu, run `deckhand start`; if it was never set up, run `deckhand setup` |
 | The screen says `waiting for cmux` | Start cmux |
-| `FW^` in the title bar | The keypad's firmware is older. Update it from the menu bar |
-| `APP^` in the title bar | The Mac app is older. Update as in [section 11](#11-updating) |
+| An orange triangle (⚠) at the right end of the title bar | The keypad's firmware and the Mac app's differ. Update the firmware from the menu bar. If the triangle stays, the Mac app is the older one: update as in [section 11](#11-updating) (up to 0.2.2b1 these read `FW^` and `APP^`) |
 | A session is missing from the list | Run `deckhand doctor` to check the cmux connection |
 | One key or LED does not work | Menu bar **키패드 → 자가 진단 시작** (Keypad → Start self-test), or hold S1 and S5 together for 2 seconds. It checks every key, the knob, the LEDs and the screen. The same two keys leave it |
 | The voice key does nothing | First check that `/voice` works in Claude Code |
